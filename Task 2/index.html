@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="add_container">
+    <label id="add_label">
+        Add new post:<br/>
+        Title: <input type="text" onchange="AddChanged()" id="add_input1" style="width: 100px"><br/><br/>
+        Text: <textarea onchange="AddChanged()" id="add_input2" style="vertical-align: top; width: 400px; height: 100px;"></textarea><br/><br/>
+        Tags: <input type="text" onchange="AddChanged()" id="add_input3" style="width: 50px">
+        Date: <input type="text" onchange="AddChanged()" id="add_input4" style="width: 50px">
+    </label>
+    <div id="add_results" style="margin-top: 10px">Result:
+        <span id="add_output1">
+</span>
+    </div>
+</div>
+<br>
+<div>
+    <label>
+        Remove:
+        <input type="text" id="remove_input" onchange="Remove()">
+        Result: <span id="remove_output"></span>
+    </label>
+</div>
+<div>
+    <label>
+        Sort by
+        ( title, date, text...) <input type="text" id="sort_input1" onchange="Sort()">
+        (asc, desc) <input type="text" id="sort_input2" onchange="Sort()">
+        Result: <span id="sort_output"></span>
+    </label>
+</div>
+<div id="news_feed_container">
+    
+</div>
+<template id="news_template">
+<div class="news" style="
+    width: 400px; padding: 10px; margin-top: 20px;
+    background: #c3c3c4">
+    <div class="title"
+         style="font: bold 24px Arial">Title</div>
+    <div class="text"
+         style="margin-top: 10px; margin-bottom: 10px;">Text</div>
+    <div class="tags">Tags</div>
+    <div style="text-align: right" class="date">Date</div>
+</div>
+    
+</template>
+<script src="code.js"></script>
+</body>
+</html>
